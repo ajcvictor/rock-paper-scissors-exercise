@@ -1,10 +1,20 @@
 # game.py
 
 import random
+import os
 
-print("Welcome 'Player One' to my Rock, Paper Scissors game!")
-print("---")
+from dotenv import load_dotenv # see: https://github.com/theskumar/python-dotenv
+
+load_dotenv() 
+
+USER_NAME = os.getenv("USER_NAME", default="Player One") 
+SECRET_PASSWORD = os.getenv("SECRET_PASSWORD")
+
+
+print("-----")
+print(f"Welcome to my Rock, Paper, Scissors App '{USER_NAME}'")
 print("Rock, Paper, Scissors, Shoot!")
+print("-----")
 
 # first define the variable of user_choice
 
@@ -20,10 +30,10 @@ print("USER CHOICE:" , user_choice)
 #...otherwise we'll stop the program before it tries to do anything else
 #...and we'll ask the user to run the program again
 
-
+print("-----")
 #if user_choice = "rock" or "paper" or "scissors:"
 if (user_choice == "rock") or (user_choice == "paper") or (user_choice == "scissors" ):
-    print ("VALID. KEEP GOING")
+    print ("VALID. Keep going.")
 else:
     print("OOPS, invalid input. Please try again.")
     exit()
@@ -44,5 +54,5 @@ else:
     print ("Oh, the computer won. It's ok. Thanks for playing. Please play again!")
 
 
-print("---")  
+print("-----")  
 print("THIS IS THE END OF OUR GAME. PLEASE PLAY AGAIN.")        
