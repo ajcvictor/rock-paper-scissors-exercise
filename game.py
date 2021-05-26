@@ -2,6 +2,8 @@
 
 import random
 
+print("Welcome 'Player One' to my Rock, Paper Scissors game!")
+print("---")
 print("Rock, Paper, Scissors, Shoot!")
 
 # first define the variable of user_choice
