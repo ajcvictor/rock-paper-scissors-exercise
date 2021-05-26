@@ -2,7 +2,6 @@
 
 import random
 
-
 print("Rock, Paper, Scissors, Shoot!")
 
 # first define the variable of user_choice
@@ -27,12 +26,21 @@ else:
     print("OOPS, invalid input. Please try again.")
     exit()
 
-# simulate suer selection
+# simulate user selection
 
 valid_options = ["rock", "paper", "scissors"]
 computer_choice = random.choice (valid_options)
 print ("COMPUTER CHOICE: ", computer_choice)
 
+#determine the winner
+
+if ((user_choice == "rock") and (computer_choice == "scissors")) or ((user_choice == "paper") and (computer_choice == "rock")) or ((user_choice == "scissors") and (computer_choice == "paper")) :
+    print ("You won! Thanks for playing. Please play again!")
+elif ((user_choice == "rock") and (computer_choice == "rock")) or ((user_choice == "paper") and (computer_choice == "paper")) or ((user_choice == "scissors") and (computer_choice == "scissors")) :
+    print ("It's a tie! Thanks for playing. Please play again!")
+else:
+    print ("Oh, the computer won. It's ok. Thanks for playing. Please play again!")
 
 
-print("THIS IS THE END OF OUR GAME. PLEASE PLAY AGAIN.")
+print("---")  
+print("THIS IS THE END OF OUR GAME. PLEASE PLAY AGAIN.")        
