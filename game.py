@@ -7,12 +7,12 @@ from dotenv import load_dotenv # see: https://github.com/theskumar/python-dotenv
 
 load_dotenv() 
 
-USER_NAME = os.getenv("USER_NAME", default="Player One") 
+PLAYER_NAME = os.getenv("PLAYER_NAME", default="Player One") 
 SECRET_PASSWORD = os.getenv("SECRET_PASSWORD")
 
 
 print("-----")
-print(f"Welcome to my Rock, Paper, Scissors App '{USER_NAME}'")
+print(f"Welcome to my Rock, Paper, Scissors App '{PLAYER_NAME}'")
 print("Rock, Paper, Scissors, Shoot!")
 print("-----")
 
@@ -47,12 +47,15 @@ print ("COMPUTER CHOICE: ", computer_choice)
 #determine the winner
 
 if ((user_choice == "rock") and (computer_choice == "scissors")) or ((user_choice == "paper") and (computer_choice == "rock")) or ((user_choice == "scissors") and (computer_choice == "paper")) :
+    print ("-----")
     print ("Congratulations! You won! ")
 elif user_choice == computer_choice :
+    print ("-----")
     print ("It's a tie, try again!")
 else:
+    print ("-----")
     print ("Oh, the computer won. It's ok. Better luck next time!")
 
 
-print("-----")  
-print("THIS IS THE END OF OUR GAME. PLEASE PLAY AGAIN.")        
+print("-----")       
+print(f"Thanks for playing, '{PLAYER_NAME}'! This is the end of the game. Please play again!")
