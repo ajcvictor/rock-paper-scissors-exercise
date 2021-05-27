@@ -47,11 +47,11 @@ print ("COMPUTER CHOICE: ", computer_choice)
 #determine the winner
 
 if ((user_choice == "rock") and (computer_choice == "scissors")) or ((user_choice == "paper") and (computer_choice == "rock")) or ((user_choice == "scissors") and (computer_choice == "paper")) :
-    print ("You won! Thanks for playing. Please play again!")
-elif ((user_choice == "rock") and (computer_choice == "rock")) or ((user_choice == "paper") and (computer_choice == "paper")) or ((user_choice == "scissors") and (computer_choice == "scissors")) :
-    print ("It's a tie! Thanks for playing. Please play again!")
+    print ("Congratulations! You won! ")
+elif user_choice == computer_choice :
+    print ("It's a tie, try again!")
 else:
-    print ("Oh, the computer won. It's ok. Thanks for playing. Please play again!")
+    print ("Oh, the computer won. It's ok. Better luck next time!")
 
 
 print("-----")  
