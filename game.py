@@ -12,11 +12,13 @@ SECRET_PASSWORD = os.getenv("SECRET_PASSWORD")
 
 
 print("-----")
-print(f"Welcome to my Rock, Paper, Scissors App {PLAYER_NAME}")
+print(f"Welcome to my Rock, Paper, Scissors App, {PLAYER_NAME}")
 print("Rock, Paper, Scissors, Shoot!")
 print("-----")
 
-# first define the variable of user_choice
+# or could do print("Welcome," PLAYER_NAME, "to Rock, Paper, Scissors, Shoot!")
+# or could do print("Welcome" + PLAYER_NAME + "to Rock, Paper, Scissors, Shoot!")
+# # first define the variable of user_choice
 
 user_choice = input("Please choose 'rock' , 'paper' or 'scissors': ")
 
